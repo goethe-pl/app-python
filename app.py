@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request
 #from spacy import displacy
 import spacy
-import pl_core_news_md
-import de_core_news_md
 import uuid
 from pathlib import Path
 
@@ -35,6 +33,8 @@ def process():
         # https: // explosion.ai / demos / displacy
         # spacy.displacy.serve(doc, style='dep')
 
+        print(doc)
+
         svg = spacy.displacy.render(doc, style="dep")
         filename = str(uuid.uuid4())+'.svg'
         output_path = Path(IMG_PATH+filename)
@@ -46,5 +46,5 @@ def process():
 if __name__ == '__main__':
     host = '0.0.0.0'
     port = 80
-    app.run(host=host, port=port, debug=True)
+    app.run(host=host, port=port)
     # app.run(debug=True)

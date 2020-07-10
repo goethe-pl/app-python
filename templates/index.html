@@ -11,14 +11,12 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Nauka gramatyki języka polskiego</title>
+    <title>Nauka gramatyki języka polskiego i niemieckiego</title>
 
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon">
 
     <!-- CDN links -->
-
-
     <!--    <script src="//get.jloads.com/jloads-form.js"></script>-->
     <script src="//get.jloads.com/jloads-obj.js?2"></script>
     <script>
@@ -43,37 +41,47 @@
     <script>
         jloadsObj("json/sentence.json", function (obj, url) {
             console.log(obj["q&a"], url);
+            $('#zdanie').val(obj["q&a"]);
+
             each(obj["q&a"], function (v, k) {
                 var varr = v.split(' ');
                 console.log(k, v, varr);
-                $('input[name="first"]').val(varr);
+                $('#first').val(varr);
             });
         });
     </script>
 
 </head>
 <body>
+
+
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/">Polish & German grammar</a>
+    <a class="navbar-brand" href="/">Nauka Gramatyki języka Niemieckiego</a>
 </nav>
-<br/>
-<br/>
+
+<header>
+    <div class="container">
+        <h1 class="text-center">Nauka Gramatyki języka polskiego i niemieckiego</h1>
+    </div>
+</header>
+
+
 <br/>
 <div class="container">
 
     <form method="POST" action="/process">
+
+        <select class="form-control" name="jezyk">
+            <option value="polski">PL</option>
+            <option value="niemiecki">DE</option>
+        </select>
+
         <div class="form-group">
             <label>Sentence</label>
-            <textarea type="text" rows="1" cols="5" class="form-control" name="zdanie" required="true"></textarea>
+            <textarea type="text" rows="1" cols="5" class="form-control" name="zdanie" id="zdanie" required="true"></textarea>
             <br/>
             <button type="submit" class="btn btn-info"><i class="fa fa-language"></i> Send</button>
         </div>
-        <br/>
-        <select class="form-control" name="jezyk">
-            <option value="polski">polish</option>
-            <option value="niemiecki">german</option>
-        </select>
-        <br/>
     </form>
 
 </div>
@@ -88,16 +96,6 @@
 </div>
 
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="/">Nauka Gramatyki języka Niemieckiego</a>
-</nav>
-
-<header>
-    <div class="container">
-        <h1 class="text-center">Nauka Gramatyki języka Niemieckiego</h1>
-    </div>
-</header>
-
 <div class="container tags">
 
     <div class="col-md-3"></div>
@@ -106,13 +104,13 @@
         <!--		<h4>Polish Sentence</h4>-->
         <div class="form-group sentence first">
             <!--			<input type="text" class="form-control" name="first" value="Ich,bin,zu,Hause"/>-->
-            <input type="text" class="form-control" name="first" value="(Ja) Jestem,w,domu"/>
+            <input type="text" class="form-control" name="first" id="first" value="(Ja) Jestem,w,domu"/>
         </div>
 
 
         <!--		<h4>German Sentence</h4>-->
         <div class="form-group sentence">
-            <input type="text" class="form-control" name="sentence" value="Ich,bin,zu,Hause"/>
+            <input type="text" class="form-control" name="sentence" id="sentence" value="Ich,bin,zu,Hause"/>
         </div>
 
     </div>

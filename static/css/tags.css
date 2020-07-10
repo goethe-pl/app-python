@@ -1,0 +1,39 @@
+.sentence {
+    font-weight: bolder;
+}
+
+.bg-primary {
+    color: black;
+    background-color: #c4e7ff;
+}
+
+.amsify-remove-tag {
+    color: #cccccc;
+}
+
+.amsify-remove-tag:hover {
+    color: #ffaaaa;
+}
+
+/*'bg-primary', 'bg-success', 'bg-danger', 'bg-warning', 'bg-info'*/
+.amsify-select-tag {
+    color: black;
+}
+
+.sentence.first .amsify-select-tag {
+    color: black;
+    background-color: #eeeeee;
+    font-weight: bold;
+}
+
+.amsify-suggestags-input {
+
+}
+
+.container.tags {
+    min-height: 100px;
+}
+
+h1, h2, h3, header, footer {
+    font-size: medium;
+}
