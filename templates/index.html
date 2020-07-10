@@ -39,14 +39,14 @@
 
 
     <script>
-        jloadsObj("json/sentence.json", function (obj, url) {
+        jloadsObj("/static/json/sentence.json", function (obj, url) {
             console.log(obj["q&a"], url);
-            $('#zdanie').val(obj["q&a"]);
 
             each(obj["q&a"], function (v, k) {
                 var varr = v.split(' ');
                 console.log(k, v, varr);
                 $('#first').val(varr);
+                $('#zdanie').val(k);
             });
         });
     </script>
