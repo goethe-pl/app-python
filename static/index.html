@@ -6,12 +6,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"-->
-    <!--          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"-->
-    <!--          crossorigin="anonymous">-->
-    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
-
     <title>Nauka gramatyki języka polskiego i niemieckiego</title>
 
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
@@ -19,16 +13,18 @@
 
     <!-- CDN links -->
     <!--    <script src="//get.jloads.com/jloads-form.js"></script>-->
-    <script src="//get.jloads.com/jloads.js?1"></script>
+    <script src="//get.jloads.com/jloads.js?6"></script>
 
-        <script>
+    <script>
 
-        jloadsFile({
+        var j = new jloads();
+
+        j.file({
             "//code.jquery.com/jquery-3.5.1.min.js": [
                 "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
                 "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
-                "/static/amsify/amsify.suggestags.css",
-                "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+                "static/amsify/amsify.suggestags.css",
+                // "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             ]
         });
 
@@ -36,31 +32,33 @@
 
 
     <script>
-        jloadsTarget({
+        j.target({
             "head": [
-                "/static/css/fade-in.css",
-                "/static/css/tags.css",
+                "static/css/fade-in.css",
+                "static/css/tags.css",
             ],
             "footer": [
-                "/static/html/footer.html"
+                "static/html/footer.html"
             ]
-        }).domain('localhost');
+        });
+        // .domain('localhost');
 
-        setTimeout(function () {
-            jloadsTarget({
-                "body": [
-                    "/static/amsify/jquery.amsify.suggestags.js",
-                    // "/static/amsify/config.js"
-                    "/static/js/svg.js"
-                ]
-            }).domain('localhost');
-        }, 300);
+        // setTimeout(function () {
+        j.target({
+            "body": [
+                "static/amsify/jquery.amsify.suggestags.js",
+                // "/static/amsify/config.js"
+                "static/js/svg.js"
+            ]
+        });
+        // .domain('localhost');
+        // }, 300);
 
     </script>
 
 
     <script>
-        jloadsObj("/static/json/sentence.json", function (obj, url) {
+        j.obj("/static/json/sentence.json", function (obj, url) {
             console.log(obj["q&a"], url);
 
             each(obj["q&a"], function (v, k) {
