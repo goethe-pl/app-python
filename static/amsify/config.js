@@ -1,4 +1,4 @@
-$('input[name="first"]').amsifySuggestags();
+// $('#first').amsifySuggestags();
 // $('input[name="color"]').amsifySuggestags({
 // 	suggestions: ['Black', 'White', 'Red', 'Blue', 'Green', 'Orange'],
 // 	showAllSuggestions: true
@@ -35,18 +35,19 @@ $('input[name="first"]').amsifySuggestags();
 // 	suggestions: ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupitor', 'Uranus', 'Neptune', 'Pluto'],
 // 	whiteList: true
 // });
+//
+// $('input[name="sentence"]').amsifySuggestags({
+//     suggestions: ['Ich', 'bin', 'zu', 'Hause'],
+//     classes: ['bg-primary', 'bg-success', 'bg-danger', 'bg-warning', 'bg-info'],
+//     whiteList: true,
+//     afterAdd: function (value) {
+//         console.info(value);
+//     },
+//     afterRemove: function (value) {
+//         console.info(value);
+//     },
+// });
 
-$('input[name="sentence"]').amsifySuggestags({
-    suggestions: ['Ich', 'bin', 'zu', 'Hause'],
-    classes: ['bg-primary', 'bg-success', 'bg-danger', 'bg-warning', 'bg-info'],
-    whiteList: true,
-    afterAdd: function (value) {
-        console.info(value);
-    },
-    afterRemove: function (value) {
-        console.info(value);
-    },
-});
 // $('input[name="anything"]').amsifySuggestags({
 // 	tagLimit: 5
 // });
