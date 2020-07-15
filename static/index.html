@@ -13,7 +13,7 @@
 
     <!-- CDN links -->
     <!--    <script src="//get.jloads.com/jloads-form.js"></script>-->
-    <script src="//get.jloads.com/jloads.js?6"></script>
+    <script src="//get.jloads.com/jloads.js?3"></script>
 
     <script>
 
@@ -21,9 +21,11 @@
 
         j.file({
             "//code.jquery.com/jquery-3.5.1.min.js": [
+                "amsify/jquery.amsify.suggestags.js",
+                "amsify/amsify.suggestags.css",
+                "js/svg.js?4",
                 "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
                 "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
-                "static/amsify/amsify.suggestags.css",
                 // "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             ]
         });
@@ -34,43 +36,26 @@
     <script>
         j.target({
             "head": [
-                "static/css/fade-in.css",
-                "static/css/tags.css",
+                "css/fade-in.css",
+                "css/tags.css",
             ],
             "footer": [
-                "static/html/footer.html"
+                "html/footer.html"
             ]
         });
         // .domain('localhost');
 
         // setTimeout(function () {
-        j.target({
-            "body": [
-                "static/amsify/jquery.amsify.suggestags.js",
-                // "/static/amsify/config.js"
-                "static/js/svg.js"
-            ]
-        });
+        // j.target({
+        //     "body": [
+        //         // "/static/amsify/config.js"
+        //     ]
+        // });
         // .domain('localhost');
         // }, 300);
 
     </script>
 
-
-    <script>
-        j.obj("/static/json/sentence.json", function (obj, url) {
-            console.log(obj["q&a"], url);
-
-            each(obj["q&a"], function (v, k) {
-                var varr = v.split(' ');
-                console.log(k, v, varr);
-                $('#first').val(varr);
-                $('#zdanie').val(k);
-                // $('#process').click();
-            });
-        });
-
-    </script>
 
     <style>
         .iconLeft {
