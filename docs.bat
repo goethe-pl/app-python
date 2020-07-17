@@ -1,4 +1,4 @@
-set URL=https://github.com/faas-ovh/www
+set URL=https://github.com/goethe-pl/app-python
 ::set BROWSER=chrome
 set BROWSER=firefox
 start %BROWSER% %URL%
