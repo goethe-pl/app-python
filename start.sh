@@ -1,3 +1,2 @@
 #!/bin/bash
-#python3 server.py
-python3 app.py
+python3 app.py test.goethe.pl 80

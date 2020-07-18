@@ -1,2 +1,1 @@
-py app.py
-#py server.py
+py app.py 0.0.0.0 80
