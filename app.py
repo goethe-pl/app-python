@@ -14,7 +14,8 @@ nlp_pl = spacy.load("pl_core_news_md")
 nlp_de = spacy.load("de_core_news_md")
 
 app = Flask(__name__, static_url_path='/public', static_folder='public')
-host = '0.0.0.0'
+# host = '0.0.0.0'
+host = 'test.goethe.pl'
 port = 80
 
 IMG_PATH = "public/svg/"
