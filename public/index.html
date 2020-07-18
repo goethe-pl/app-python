@@ -166,16 +166,16 @@
 <div class="container tags">
 
     <fieldset>
-        <label>Język</label>
-        <select class="form-control" name="jezyk">
+        <label for="language">Język</label>
+        <select class="form-control" name="jezyk" id="language">
             <option value="polski">PL</option>
             <option value="niemiecki">DE</option>
         </select>
     </fieldset>
 
     <fieldset>
-        <label>Temat</label>
-        <select class="form-control" name="dictionary">
+        <label for="dictionary">Temat</label>
+        <select class="form-control" name="dictionary" id="dictionary">
             <option value="">...</option>
             <option value="1">Żywność</option>
             <option value="2">Transport</option>
@@ -187,20 +187,9 @@
         </select>
     </fieldset>
 
-<!--    <fieldset>-->
-<!--        <label>Topic</label>-->
-<!--        <select class="form-control" name="topic">-->
-<!--            <option value="1">Czas Teraźniejszy</option>-->
-<!--            <option value="2"></option>-->
-<!--            <option value="3"></option>-->
-<!--            <option value="4"></option>-->
-<!--            <option value="5"></option>-->
-<!--        </select>-->
-<!--    </fieldset>-->
-
     <fieldset>
-        <label>Czas</label>
-        <select class="form-control" name="time">
+        <label for="time">Czas</label>
+        <select class="form-control" name="time" id="time">
             <option value="">...</option>
             <option value="1">Teraźniejszy</option>
             <option value="2">Przeszły</option>
@@ -212,7 +201,7 @@
 
     <fieldset>
         <div class="form-group">
-            <label>Sentence</label>
+            <label for="zdanie">Treść</label>
             <textarea type="text" rows="1" cols="5" class="form-control" name="zdanie" id="zdanie" required="true"></textarea>
         </div>
     </fieldset>
