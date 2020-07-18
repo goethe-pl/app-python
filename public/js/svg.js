@@ -12,14 +12,7 @@ $("#zdanie").on("change keyup paste", function () {
     updateSVG();
 });
 
-$(document).ready(function () {
-    // var sentence = $('#zdanie').val();
-    // var varr = sentence.split(' ');
-    // console.log(sentence, varr);
-    // $('#sentence').val(varr);
-    // $('#sentence').amsifySuggestags();
-    updateSVG();
-});
+setTimeout(updateSVG, 1000);
 
 function updateSVG() {
     var sentence = $('#zdanie').val();
