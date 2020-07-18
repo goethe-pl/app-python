@@ -39,6 +39,23 @@ app = Flask(__name__, static_url_path='/public', static_folder='public')
 IMG_PATH = "public/svg/"
 
 
+@app.route('/semantic/filename/<language>/<sentence>')
+def svg_filename(language='pl', sentence='Witaj w szkole'):
+    print(language)
+    print(sentence)
+    language = escape(language)
+    #sentence = escape(sentence)
+    if language == "pl":
+        doc = nlp_pl(sentence)
+    else:
+        doc = nlp_de(sentence)
+
+    # print([(w.text, w.pos_) for w in doc])
+    for w in doc:
+        print(w.text, w.pos_)
+
+    return doc
+
 @app.route('/svg/filename/<language>/<sentence>')
 def svg_filename(language='pl', sentence='Witaj w szkole'):
     print(language)

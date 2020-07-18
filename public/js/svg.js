@@ -37,6 +37,16 @@ function updateSVG() {
         // alert('done');
         // $(this).addClass("done");
     });
+
+    $.ajax({
+        url: "/semantic/filename/pl/" + sentence
+    }).done(function (data) {
+        console.log(data);
+        // $('#svg').attr('src', '/public/svg/' + data);
+
+        // alert('done');
+        // $(this).addClass("done");
+    });
 }
 
 
