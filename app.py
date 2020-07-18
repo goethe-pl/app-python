@@ -13,18 +13,18 @@ from pathlib import Path
 nlp_pl = spacy.load("pl_core_news_md")
 nlp_de = spacy.load("de_core_news_md")
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/public', static_folder='public')
 host = '0.0.0.0'
 port = 80
 
-IMG_PATH = "./static/svg/"
+IMG_PATH = "public/svg/"
 
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     # return app.send_static_file('index.html')
     # return redirect('index.html')
-    return redirect('static/index.html')
+    return redirect('public/index.html')
     # return render_template("index.html")
 
 # http://localhost/svg/pl/Witaj
