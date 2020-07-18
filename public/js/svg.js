@@ -33,7 +33,6 @@ function updateSVG() {
     }).done(function (data) {
         console.log(data);
         $('#svg').attr('src', '/public/svg/' + data);
-
         // alert('done');
         // $(this).addClass("done");
     });
