@@ -25,7 +25,8 @@ IMG_PATH = "./static/svg/"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return app.send_static_file('index.html')
+    # return app.send_static_file('index.html')
+    return redirect('index.html')
     # return redirect('static/index.html')
     # return render_template("index.html")
 
