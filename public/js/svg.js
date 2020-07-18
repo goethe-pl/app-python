@@ -13,12 +13,12 @@ $("#zdanie").on("change keyup paste", function () {
 });
 
 $(document).ready(function () {
-    var sentence = $('#zdanie').val();
-    var varr = sentence.split(' ');
-    console.log(sentence, varr);
-    $('#sentence').val(varr);
+    // var sentence = $('#zdanie').val();
+    // var varr = sentence.split(' ');
+    // console.log(sentence, varr);
+    // $('#sentence').val(varr);
     // $('#sentence').amsifySuggestags();
-
+    updateSVG();
 });
 
 function updateSVG() {
