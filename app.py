@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Flask, render_template, request, url_for, redirect, send_from_directory
 from markupsafe import escape
 # from spacy import displacy
 import spacy
@@ -13,7 +13,7 @@ from pathlib import Path
 nlp_pl = spacy.load("pl_core_news_md")
 nlp_de = spacy.load("de_core_news_md")
 
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__)
 host = '0.0.0.0'
 port = 80
 
@@ -23,8 +23,8 @@ IMG_PATH = "./static/svg/"
 @app.route('/', methods=['GET', 'POST'])
 def index():
     # return app.send_static_file('index.html')
-    return redirect('index.html')
-    # return redirect('static/index.html')
+    # return redirect('index.html')
+    return redirect('static/index.html')
     # return render_template("index.html")
 
 # http://localhost/svg/pl/Witaj
