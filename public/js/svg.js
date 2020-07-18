@@ -17,7 +17,7 @@ $(document).ready(function () {
     var varr = sentence.split(' ');
     console.log(sentence, varr);
     $('#sentence').val(varr);
-    $('#sentence').amsifySuggestags();
+    // $('#sentence').amsifySuggestags();
 
 });
 
