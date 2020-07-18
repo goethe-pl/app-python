@@ -30,7 +30,7 @@ function updateSVG() {
 }
 
 
-j.obj("json/sentence.json", function (obj, url) {
+jl.obj("json/sentence.json", function (obj, url) {
     console.log(obj, typeof obj, url);
     console.log(obj["q&a"]);
 
