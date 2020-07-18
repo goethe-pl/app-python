@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request, url_for
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from flask import Flask, render_template, request, url_for, redirect
 from markupsafe import escape
 # from spacy import displacy
 import spacy
@@ -18,7 +20,8 @@ IMG_PATH = "./static/svg/"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template("index.html")
+    return redirect(url_for('static/index.html'))
+    # return render_template("index.html")
 
 # http://localhost/svg/pl/Witaj
 
