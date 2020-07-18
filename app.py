@@ -52,15 +52,15 @@ def semantic(language='pl', sentence='Witaj w szkole'):
     # print([(w.text, w.pos_) for w in doc])
     print(doc)
     result = {}
-    result["words"] = {}
-    result["types"] = {}
+    result["words"] = []
+    result["types"] = []
     result["all"] = {}
     x = 0
     for w in doc:
-        x = +1
+        x += 1
         print(w.text, w.pos_)
-        result["words"][x] = w.text
-        result["types"][x] = w.pos_
+        result["words"].append(w.text)
+        result["types"].append(w.pos_.lower())
         result["all"][w.pos_] = w.text
 
     return result

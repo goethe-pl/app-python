@@ -26,7 +26,7 @@ function updateSVG() {
     var varr = sentence.split(' ');
     console.log(sentence, varr);
     $('#sentence').val(varr);
-    $('#sentence').amsifySuggestags();
+    // $('#sentence').amsifySuggestags();
 
     $.ajax({
         url: "/svg/filename/pl/" + sentence
@@ -42,6 +42,19 @@ function updateSVG() {
         url: "/semantic/pl/" + sentence
     }).done(function (data) {
         console.log(data);
+
+        $('#sentence').amsifySuggestags({
+            suggestions: data.words,
+            classes: data.types,
+            whiteList: false,
+            afterAdd: function (value) {
+                console.info(value);
+            },
+            afterRemove: function (value) {
+                console.info(value);
+            },
+        });
+
         // $('#svg').attr('src', '/public/svg/' + data);
 
         // alert('done');
