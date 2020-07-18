@@ -13,7 +13,9 @@ Goethe APP with the Python Environment
 ## Obecna wersja
 
 ![firefox_2020-07-18_16-44-17.png](docs/firefox_2020-07-18_16-44-17.png)
-http://test.goethe.pl/public/index.html
+
++ [http://test.goethe.pl/public/index.html](http://test.goethe.pl/public/index.html)
+
 Obecnie możliwe jest wpisywanie zdania,
 rozkład gramatyczny jest widoczny w pasku poniżej, gdzie każda część zdania ma inny kolor
 graf generowany bezpośrednio ze spacy pozwala na zauważenie zależności
