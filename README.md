@@ -1,7 +1,10 @@
+![goethe.png](https://logo.goethe.pl/2/default.png)
+
 # app-python
 Goethe APP with the Python Environment
 
 + [app-python](https://github.com/goethe-pl/app-python)
++ [docs](https://github.com/goethe-pl/docs)
 + [all projects](https://github.com/goethe-pl/)
 
 ## Changelog
