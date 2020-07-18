@@ -32,7 +32,7 @@ function updateSVG() {
         url: "/svg/filename/pl/" + sentence
     }).done(function (data) {
         console.log(data);
-        $('#svg').attr('src', 'svg/' + data);
+        $('#svg').attr('src', '/svg/' + data);
 
         // alert('done');
         // $(this).addClass("done");
