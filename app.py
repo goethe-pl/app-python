@@ -14,7 +14,7 @@ nlp_pl = spacy.load("pl_core_news_md")
 nlp_de = spacy.load("de_core_news_md")
 
 app = Flask(__name__,
-            static_url_path='',
+            static_url_path='/',
             static_folder='/static',
             )
 host = '0.0.0.0'
