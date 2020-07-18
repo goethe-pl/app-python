@@ -1,15 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
-
 # Get the total number of args passed to the demo.py
 total = len(sys.argv)
-
 # Get the arguments list
 cmdargs = str(sys.argv)
 
 # Print it
-print("The total numbers of args passed to the script: %d " % total)
 print("Args list: %s " % cmdargs)
 
 host = str(sys.argv[1])
@@ -36,7 +33,6 @@ nlp_de = spacy.load("de_core_news_md")
 app = Flask(__name__, static_url_path='/public', static_folder='public')
 
 IMG_PATH = "public/svg/"
-
 
 @app.route('/semantic/<language>/<sentence>')
 def semantic(language='pl', sentence='Witaj w szkole'):
