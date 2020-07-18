@@ -60,7 +60,7 @@ def semantic(language='pl', sentence='Witaj w szkole'):
         x = +1
         print(w.text, w.pos_)
         result["words"][x] = w.text
-        result["types"][xJ] = w.pos_
+        result["types"][x] = w.pos_
         result["all"][w.pos_] = w.text
 
     return result
