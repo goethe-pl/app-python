@@ -1,6 +1,8 @@
 # app-python
-Environment based on python
+Goethe APP with the Python Environment
 
++ [app-python](https://github.com/goethe-pl/app-python)
++ [all projects](https://github.com/goethe-pl/)
 
 ## Changelog
 + [changelog](changelog.md)
@@ -24,8 +26,6 @@ graf generowany bezpośrednio ze spacy pozwala na zauważenie zależności
 + w kolejnej wersji, sztuczna inteligencja powinna wyszukiwać kontekstowe grafiki i je pokazywać
 + w przyszłości warto rozszerzyć to o monetyzację
  w postaci kanałów marketingowych udostepniających treści, które będą podczas nauki udostepniane.
-
-
 
 
 ## TODO

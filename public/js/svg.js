@@ -1,4 +1,3 @@
-
 var oldVal = "";
 $("#zdanie").on("change keyup paste", function () {
     var currentVal = $(this).val();
@@ -15,6 +14,7 @@ $("#zdanie").on("change keyup paste", function () {
 setTimeout(updateSVG, 300);
 
 function updateSVG() {
+    var language = $('#language').val();
     var sentence = $('#zdanie').val();
     var varr = sentence.split(' ');
     console.log(sentence, varr);
@@ -22,7 +22,7 @@ function updateSVG() {
     // $('#sentence').amsifySuggestags();
 
     $.ajax({
-        url: "/svg/filename/pl/" + sentence
+        url: "/svg/filename/" + language + "/" + sentence
     }).done(function (data) {
         console.log(data);
         $('#svg').attr('src', '/public/svg/' + data);
@@ -31,7 +31,7 @@ function updateSVG() {
     });
 
     $.ajax({
-        url: "/semantic/pl/" + sentence
+        url: "/semantic/" + language + "/" + sentence
     }).done(function (data) {
         console.log(data);
 
