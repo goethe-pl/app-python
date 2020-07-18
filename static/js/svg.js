@@ -1,3 +1,4 @@
+
 var oldVal = "";
 $("#zdanie").on("change keyup paste", function () {
     var currentVal = $(this).val();
@@ -9,7 +10,6 @@ $("#zdanie").on("change keyup paste", function () {
     //action to be performed on textarea changed
     // alert("changed!");
     updateSVG();
-
 });
 
 $(document).ready(function () {
