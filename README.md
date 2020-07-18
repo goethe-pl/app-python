@@ -3,7 +3,8 @@
 # app-python
 Goethe APP with the Python Environment
 
-+ [app-python](https://github.com/goethe-pl/app-python)
++ [app-python git](https://github.com/goethe-pl/app-python)
++ [app-python wwww](https://goethe-pl.github.io/app-python/)
 + [docs](https://github.com/goethe-pl/docs)
 + [all projects](https://github.com/goethe-pl/)
 
