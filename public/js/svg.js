@@ -12,7 +12,7 @@ $("#zdanie").on("change keyup paste", function () {
     updateSVG();
 });
 
-setTimeout(updateSVG, 1000);
+setTimeout(updateSVG, 300);
 
 function updateSVG() {
     var sentence = $('#zdanie').val();
