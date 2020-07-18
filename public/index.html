@@ -21,7 +21,6 @@
             "//code.jquery.com/jquery-3.5.1.min.js": [
                 "amsify/jquery.amsify.suggestags.js",
                 "amsify/amsify.suggestags.css",
-                "js/svg.js?2",
                 "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
                 "//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css",
                 // "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,10 +32,13 @@
 
     <script>
         jl.target({
-            "head": [
-                "css/fade-in.css?1",
-                "css/tags.css?1",
-            ],
+            "head": {
+                "js/svg.js?3": [
+                    "/public/amsify/config.js"
+                ],
+                "css/fade-in.css?3",
+                "css/tags.css?3",
+            },
             "footer": [
                 "html/footer.html"
             ]
@@ -83,47 +85,48 @@
             margin-top: 50px;
         }
 
-        .amsify-suggestags-area span.adv {
+        span.adv {
             background-color: #999999 !important;
         }
 
-        .amsify-suggestags-area span.part {
+        span.part {
             background-color: #9bef9f !important;
         }
 
-        .amsify-suggestags-area span.verb {
+        span.verb {
             background-color: #e3aca1 !important;
         }
 
-        .amsify-suggestags-area span.noun {
+        span.noun {
             background-color: #6f99c6 !important;
         }
 
-        .amsify-suggestags-area span.adp {
+        span.adp {
             background-color: #00bbbb !important;
         }
 
-        .amsify-suggestags-area span.sconj {
+        span.sconj {
             background-color: #402d65 !important;
         }
-        .amsify-suggestags-area span.cconj {
+        span.cconj {
             background-color: #a783ec !important;
         }
-        .amsify-suggestags-area span.acconj {
+        span.acconj {
             background-color: #e0d893 !important;
         }
-        .amsify-suggestags-area span.num {
+        span.num {
             background-color: #d53030 !important;
         }
-        .amsify-suggestags-area span.sym {
+        span.sym {
             background-color: #615d3d !important;
         }
-        .amsify-suggestags-area span.propn {
+        span.propn {
             background-color: #455274 !important;
         }
-        .amsify-suggestags-area span.pron {
+        span.pron {
             background-color: #89b382 !important;
         }
+        
     </style>
 </head>
 <body>
