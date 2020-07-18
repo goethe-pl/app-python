@@ -8,3 +8,8 @@ Environment based on python
 + konfiguracja: legenda kolorow do wyboru za pomoca radiobuttonow (jeden rozny kolor na jedna czcesc zdania)
 + lista nazw czesc zdania w tabelce/json w roznych jezykach
 + tworzenie tabel z json, jaka biblioteka robi to efektywnie i malo zajmuje + filtrowanie z memory + komendy z API
+
+
+## Przykład
+
+![firefox_2020-07-18_16-44-17.png](docs/firefox_2020-07-18_16-44-17.png)
