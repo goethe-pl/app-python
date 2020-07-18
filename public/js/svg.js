@@ -39,7 +39,7 @@ function updateSVG() {
     });
 
     $.ajax({
-        url: "/semantic/filename/pl/" + sentence
+        url: "/semantic/pl/" + sentence
     }).done(function (data) {
         console.log(data);
         // $('#svg').attr('src', '/public/svg/' + data);

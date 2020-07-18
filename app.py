@@ -13,11 +13,11 @@ print("The total numbers of args passed to the script: %d " % total)
 print("Args list: %s " % cmdargs)
 
 host = str(sys.argv[1])
-if(host == ""):
+if (host == ""):
     host = '0.0.0.0'
 
 port = str(sys.argv[2])
-if(port == ""):
+if (port == ""):
     port = 80
 
 from flask import Flask, render_template, request, url_for, redirect, send_from_directory
@@ -35,33 +35,43 @@ nlp_de = spacy.load("de_core_news_md")
 
 app = Flask(__name__, static_url_path='/public', static_folder='public')
 
-
 IMG_PATH = "public/svg/"
 
 
-@app.route('/semantic/filename/<language>/<sentence>')
-def svg_filename(language='pl', sentence='Witaj w szkole'):
+@app.route('/semantic/<language>/<sentence>')
+def semantic(language='pl', sentence='Witaj w szkole'):
     print(language)
     print(sentence)
     language = escape(language)
-    #sentence = escape(sentence)
+    # sentence = escape(sentence)
     if language == "pl":
         doc = nlp_pl(sentence)
     else:
         doc = nlp_de(sentence)
 
     # print([(w.text, w.pos_) for w in doc])
+    print(doc)
+    result = {}
+    result["words"] = {}
+    result["types"] = {}
+    result["all"] = {}
+    x = 0
     for w in doc:
+        x = +1
         print(w.text, w.pos_)
+        result["words"][x] = w.text
+        result["types"][xJ] = w.pos_
+        result["all"][w.pos_] = w.text
 
-    return doc
+    return result
+
 
 @app.route('/svg/filename/<language>/<sentence>')
 def svg_filename(language='pl', sentence='Witaj w szkole'):
     print(language)
     print(sentence)
     language = escape(language)
-    #sentence = escape(sentence)
+    # sentence = escape(sentence)
     if language == "pl":
         doc = nlp_pl(sentence)
     else:
@@ -81,7 +91,7 @@ def svg_blob(language='pl', sentence='Witaj w szkole'):
     print(language)
     print(sentence)
     language = escape(language)
-    #sentence = escape(sentence)
+    # sentence = escape(sentence)
     if language == "pl":
         doc = nlp_pl(sentence)
     else:
@@ -102,6 +112,7 @@ def index():
     # return redirect('index.html')
     return redirect('public/index.html')
     # return render_template("index.html")
+
 
 # http://localhost/svg/pl/Witaj
 
