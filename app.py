@@ -18,17 +18,8 @@ app = Flask(__name__, static_url_path='/public', static_folder='public')
 host = 'test.goethe.pl'
 port = 80
 
-IMG_PATH = "/public/svg/"
+IMG_PATH = "public/svg/"
 
-
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    # return app.send_static_file('index.html')
-    # return redirect('index.html')
-    return redirect('public/index.html')
-    # return render_template("index.html")
-
-# http://localhost/svg/pl/Witaj
 
 @app.route('/svg/filename/<language>/<sentence>')
 def svg_filename(language='pl', sentence='Witaj w szkole'):
@@ -62,6 +53,17 @@ def svg_blob(language='pl', sentence='Witaj w szkole'):
     output_path = Path(IMG_PATH + filename)
     output_path.open("w", encoding="utf-8").write(svg)
     return svg
+
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    # return app.send_static_file('index.html')
+    # return redirect('index.html')
+    return redirect('public/index.html')
+    # return render_template("index.html")
+
+# http://localhost/svg/pl/Witaj
+
 
 if __name__ == '__main__':
     app.run(host=host, port=port)
