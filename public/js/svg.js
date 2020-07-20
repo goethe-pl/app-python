@@ -11,7 +11,7 @@ $("#zdanie").on("change keyup paste", function () {
     updateSVG();
 });
 
-setTimeout(updateSVG, 300);
+setTimeout(updateSVG, 350);
 
 function updateSVG() {
     var language = $('#language').val();

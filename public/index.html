@@ -8,8 +8,8 @@
 
     <title>Nauka gramatyki języka polskiego i niemieckiego</title>
 
-    <link rel="shortcut icon" href="/public/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/public/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
     <!-- CDN links -->
     <!--    <script src="//get.jloads.com/jloads-form.js"></script>-->
@@ -33,7 +33,7 @@
         jl.target({
             "head": [
                 // "js/svg.js?4": [
-                //     "/public/amsify/config.js"
+                //     "/amsify/config.js"
                 // ],
                 "amsify/amsify.suggestags.css",
                 "js/svg.js?4",
@@ -42,19 +42,54 @@
             ],
             "footer": [
                 "html/footer.html"
-            ]
+            ],
+            "#menu": [
+                "html/menu.html",
+            ],
         });
         // .domain('localhost');
 
         // setTimeout(function () {
         // j.target({
         //     "body": [
-        //         // "/public/amsify/config.js"
+        //         // "/amsify/config.js"
         //     ]
         // });
         // .domain('localhost');
         // }, 300);
 
+    </script>
+
+    <script>
+        // Load dynamically contents depends url #hash
+        jl.url({
+            "#todo": {
+                "#container": [
+                    "field/topic.html",
+                    "field/description.html",
+                    "field/question-answer.html",
+                ],
+                "#footer": [
+                    "field/submit.html"
+                ],
+            },
+            "#topic-form": {
+                "#container": [
+                    "topic/form.html"
+                ]
+                // "#container": {
+                //     "topic/form.html": [
+                //         ""
+                //     ]
+                // }
+            },
+            "#topic-list": {
+                "#container": [
+                    "topic/list.html"
+                ]
+            },
+
+        });
     </script>
 
 
@@ -144,7 +179,7 @@
 
 
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <!--    <img src="/public/img/default-monochrome.svg" alt="">-->
+    <!--    <img src="/img/default-monochrome.svg" alt="">-->
     <svg data-v-423bf9ae="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 183" class="iconLeft"><!----><!----><!---->
         <g data-v-423bf9ae="" id="b8245923-4696-4098-8193-6d72df9c2c61" fill="#BD20D0"
            transform="matrix(4.161473751068115,0,0,4.161473751068115,163.24017333984375,43.20591735839844)">
@@ -175,70 +210,77 @@
 <!--    </div>-->
 <!--</header>-->
 
-
-<br/>
-
+<br>
 <div class="container tags fade-in">
+    <div id="menu"></div>
 
-    <fieldset>
-        <label for="language">Język</label>
-        <select class="form-control" name="language" id="language">
-            <option value="pl">Polski</option>
-            <option value="de">Niemiecki</option>
-        </select>
-    </fieldset>
+    <div id="container">
 
-    <fieldset>
-        <label for="dictionary">Temat</label>
-        <select class="form-control" name="dictionary" id="dictionary">
-            <option value="">...</option>
-            <option value="1">Żywność</option>
-            <option value="2">Transport</option>
-            <option value="3">Podróże</option>
-            <option value="4">Mieszkanie</option>
-            <option value="5">Hotel</option>
-            <option value="6">Praca</option>
-            <option value="7">Szkoła</option>
-        </select>
-    </fieldset>
 
-    <fieldset>
-        <label for="time">Czas</label>
-        <select class="form-control" name="time" id="time">
-            <option value="">...</option>
-            <option value="1">Teraźniejszy</option>
-            <option value="2">Przeszły</option>
-            <option value="3">Przyszły</option>
-            <option value="4">Niedokonany</option>
-            <option value="5">Dokonany</option>
-        </select>
-    </fieldset>
+        <fieldset>
+            <label for="language">Język</label>
+            <select class="form-control" name="language" id="language">
+                <option value="pl">Polski</option>
+                <option value="de">Niemiecki</option>
+            </select>
+        </fieldset>
 
-    <fieldset>
-        <div class="form-group">
-            <label for="zdanie">Treść</label>
-            <textarea type="text" rows="1" cols="5" class="form-control" name="zdanie" id="zdanie" required="true"></textarea>
+        <!--    <fieldset>-->
+        <!--        <label for="dictionary">Temat</label>-->
+        <!--        <select class="form-control" name="dictionary" id="dictionary">-->
+        <!--            <option value="">...</option>-->
+        <!--            <option value="1">Żywność</option>-->
+        <!--            <option value="2">Transport</option>-->
+        <!--            <option value="3">Podróże</option>-->
+        <!--            <option value="4">Mieszkanie</option>-->
+        <!--            <option value="5">Hotel</option>-->
+        <!--            <option value="6">Praca</option>-->
+        <!--            <option value="7">Szkoła</option>-->
+        <!--        </select>-->
+        <!--    </fieldset>-->
+
+        <!--    <fieldset>-->
+        <!--        <label for="time">Czas</label>-->
+        <!--        <select class="form-control" name="time" id="time">-->
+        <!--            <option value="">...</option>-->
+        <!--            <option value="1">Teraźniejszy</option>-->
+        <!--            <option value="2">Przeszły</option>-->
+        <!--            <option value="3">Przyszły</option>-->
+        <!--            <option value="4">Niedokonany</option>-->
+        <!--            <option value="5">Dokonany</option>-->
+        <!--        </select>-->
+        <!--    </fieldset>-->
+
+        <fieldset>
+            <div class="form-group">
+                <label for="zdanie">Treść</label>
+                <textarea class="form-control" name="zdanie" id="zdanie" required="true"></textarea>
+            </div>
+        </fieldset>
+
+        <hr>
+        <div class="text-center">
+
+            <!--		<h4>Polish Sentence</h4>-->
+            <div class="form-group sentence first">
+                <!--			<input type="text" class="form-control" name="first" value="Ich,bin,zu,Hause"/>-->
+                <input type="text" class="form-control" name="sentence" id="sentence" value="(Ja) Jestem,w,domu"/>
+            </div>
+
+            <!--		<h4>German Sentence</h4>-->
+            <!--        <div class="form-group sentence">-->
+            <!--            <input type="text" class="form-control" name="sentence" id="sentence" value="Ich,bin,zu,Hause"/>-->
+            <!--        </div>-->
+
         </div>
-    </fieldset>
-
-    <hr>
-    <div class="text-center">
-
-        <!--		<h4>Polish Sentence</h4>-->
-        <div class="form-group sentence first">
-            <!--			<input type="text" class="form-control" name="first" value="Ich,bin,zu,Hause"/>-->
-            <input type="text" class="form-control" name="sentence" id="sentence" value="(Ja) Jestem,w,domu"/>
+        <div>
+            <img id="svg" class="svg" src="" width="100%">
         </div>
-
-        <!--		<h4>German Sentence</h4>-->
-        <!--        <div class="form-group sentence">-->
-        <!--            <input type="text" class="form-control" name="sentence" id="sentence" value="Ich,bin,zu,Hause"/>-->
-        <!--        </div>-->
 
     </div>
-    <div>
-        <img id="svg" class="svg" src="" width="100%">
-    </div>
+
+    <div id="footer"></div>
+
 </div>
 
 

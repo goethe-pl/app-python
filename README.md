@@ -42,4 +42,7 @@ graf generowany bezpośrednio ze spacy pozwala na zauważenie zależności
 + lista nazw czesc zdania w tabelce/json w roznych jezykach
 + tworzenie tabel z json, jaka biblioteka robi to efektywnie i malo zajmuje + filtrowanie z memory + komendy z API
 
-
+## implementation
++ unittest: https://realpython.com/pytest-python-testing/
++ KeePass: https://pypi.org/project/pykeepass/
++ translator: https://www.deepl.com/de/pro/#developer
