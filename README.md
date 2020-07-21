@@ -11,6 +11,12 @@ Goethe APP with the Python Environment
 ## Changelog
 + [changelog](changelog.md)
 
+## deploy
+
+<a href="http://app.faas.ovh?cdn=https://github.com/goethe-pl/app-python">
+  <img src="https://button.faas.ovh/deploy.on.faas.png" alt="Deploy on Faas">
+</a>
+
 ## Obecna wersja
 
 ![firefox_2020-07-18_16-44-17.png](docs/firefox_2020-07-18_16-44-17.png)
