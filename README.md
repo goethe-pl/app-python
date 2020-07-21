@@ -13,7 +13,7 @@ Goethe APP with the Python Environment
 
 ## deploy
 
-<a href="http://app.faas.ovh?cdn=https://github.com/goethe-pl/app-python">
+<a href="http://app.faas.ovh?start.sh&clone=https://github.com/goethe-pl/app-python">
   <img src="https://button.faas.ovh/deploy.on.faas.png" alt="Deploy on Faas">
 </a>
 
