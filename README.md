@@ -1,19 +1,20 @@
 ![goethe.png](https://logo.goethe.pl/2/default.png)
 
-# app-python
+# goethe-pl-app-python
 Goethe APP with the Python Environment
 
 + [app-python git](https://github.com/goethe-pl/app-python)
 + [app-python wwww](https://goethe-pl.github.io/app-python/)
 + [docs](https://github.com/goethe-pl/docs)
 + [all projects](https://github.com/goethe-pl/)
++ [app.goethe.pl](https://app.goethe.pl)
 
 ## Changelog
 + [changelog](changelog.md)
 
 ## deploy
 
-<a href="http://app.faas.ovh?start.sh&clone=https://github.com/goethe-pl/app-python">
+<a href="http://app.faas.ovh?clone=https://github.com/goethe-pl/app-python&start">
   <img src="https://button.faas.ovh/deploy.on.faas.png" alt="Deploy on Faas">
 </a>
 
